@@ -1,0 +1,3 @@
+Guía de ejecución
+chmod +x kubernetes.sh
+sh kubernetes.sh
