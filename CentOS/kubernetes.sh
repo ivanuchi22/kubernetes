@@ -6,7 +6,8 @@ yum install -y docker-ce docker-ce-cli containerd.io -y
 systemctl start docker
 systemctl enable docker
 yum-config-manager --add-repo https://raw.githubusercontent.com/ivanuchi22/kubernetes/main/CentOS/kubernetes.repo
-yum update
+yum update -y
+yum install kubelet kubeadm kubectl --disableexcludes=kubernetes -y
 systemctl enable --now kubelet
 mkdir -p /etc/containerd
 containerd config default | tee /etc/containerd/config.toml
